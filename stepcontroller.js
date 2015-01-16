@@ -147,7 +147,7 @@ var angles_txt = svg.selectAll("text")
         .attr("y",function(d){ if (d%45 == 0){ return (r1+15)*Math.sin(d* (Math.PI/180)) + trans_y+5;}
                       else {return r2*Math.sin(d* (Math.PI/180)) + trans_y;}})
 		.attr("id",function(d){return d;})
-		.html(function(d){ if (d%45 == 0){ return (360-(d-90))%360;} else {return ""}})
+		.text(function(d){ if (d%45 == 0){ return (360-(d-90))%360;} else {return ""}})
 		.style("font-weight", "bold")
 		.style("font-size",function(d){ if (d%45 == 0){ return 16;}
                                           else {return 12}});
